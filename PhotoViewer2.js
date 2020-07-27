@@ -1,12 +1,12 @@
 
 // bucket名を定義
-var albumBucketName = 'photos-tagfa';
+var albumBucketName = 'xxxxx';
 
 
 //AWSのリージョン、CognitoのプールIDクレデンシャルを定義
 AWS.config.region = 'ap-northeast-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'ap-northeast-1:33ce524f-7a32-419d-b90f-68abdf4f858e',
+    IdentityPoolId: 'xxxxxxxxxxxx',
 });
 
 // S3オブジェクトを生成
