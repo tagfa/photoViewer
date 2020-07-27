@@ -1,16 +1,13 @@
+// bucket名を定義
 var albumBucketName = 'photos-tagfa';
 
-// **DO THIS**:
-//   Replace this block of code with the sample code located at:
-//   Cognito -- Manage Identity Pools -- [identity_pool_name] -- Sample Code -- JavaScript
-//
-// Initialize the Amazon Cognito credentials provider
+//AWSのリージョン、CognitoのプールIDを定義
 AWS.config.region = 'ap-northeast-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'ap-northeast-1:33ce524f-7a32-419d-b90f-68abdf4f858e',
 });
 
-// Create a new service object
+// S3オブジェクトを定義
 var s3 = new AWS.S3({
   apiVersion: '2006-03-01',
   params: {Bucket: albumBucketName}
@@ -20,8 +17,6 @@ var s3 = new AWS.S3({
 function getHtml(template) {
   return template.join('\n');
 }
-// snippet-end:[s3.JavaScript.s3_PhotoViewer.config]
-
 
 //
 // Functions
